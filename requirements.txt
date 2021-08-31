@@ -28,6 +28,7 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 packaging==21.0
 protobuf==3.17.3
+psycopg2-binary==2.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 PyJWT==2.1.0
