@@ -118,8 +118,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'task2ecommerce',
-        'USER': 'bekzod',
-        'PASSWORD': 'bek_psql',
+        'USER': 'postgres',
+        'PASSWORD': 'bek_psqlaws',
         'HOST': 'ec2-3-144-114-226.us-east-2.compute.amazonaws.com',
         'PORT': '5432',
     }
