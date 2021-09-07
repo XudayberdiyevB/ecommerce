@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f(uz9a#oue(2fe$so)^en%kx@br21b$lx5xxetne%r31l2n%^g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["3.144.114.226"]
 
 # Application definition
 
@@ -116,8 +116,12 @@ WSGI_APPLICATION = 'asaxiyuz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'task2ecommerce',
+        'USER': 'bekzod',
+        'PASSWORD': 'bek_psql',
+        'HOST': '3.144.114.226',
+        'PORT': '5432',
     }
 }
 
