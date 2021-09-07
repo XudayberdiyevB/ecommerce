@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f(uz9a#oue(2fe$so)^en%kx@br21b$lx5xxetne%r31l2n%^g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["3.144.114.226"]
+ALLOWED_HOSTS = ["3.144.114.226", "ec2-3-144-114-226.us-east-2.compute.amazonaws.com"]
 
 # Application definition
 
@@ -120,7 +120,7 @@ DATABASES = {
         'NAME': 'task2ecommerce',
         'USER': 'bekzod',
         'PASSWORD': 'bek_psql',
-        'HOST': '3.144.114.226',
+        'HOST': 'ec2-3-144-114-226.us-east-2.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
