@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
 from rest_framework.permissions import IsAuthenticated
+
+from carts.models import CartModel
 from .models import OrderModel, OrderedItems
 from .serializers import OrderSerializers, OrderedItemSerializer
 
@@ -38,7 +40,10 @@ class OrderedItemListView(APIView):
 
     def post(self, request):
         serializer = OrderedItemSerializer(data=request.data)
+        cart = CartModel.objects.get(self.request.user)
         if serializer.is_valid():
             serializer.save()
+            cart.ordered = True
+            cart.save()
             return Response(serializer.data, status.HTTP_201_CREATED)
         return Response(status.HTTP_400_BAD_REQUEST)
